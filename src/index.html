@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Fizzbuzz</title>
+
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<script src="../bower_components/angular/angular.js"></script>
+
+	<script src="js/all.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+	<body ng-app="Fizzbuzz">
+		<div ng-controller="FizzbuzzController" class="container">
+			<h1>Fizzbuzz</h1>
+			<label>Enter the limit:</label><input class="form-control" type="text" ng-model="number" />
+			<button class="btn btn-primary" ng-click="startFizzbuzz(number)">Start Fizzbuzz!</button>
+			<div class="well">
+				<h3>Result:</h3>
+				<div class="resultDiv"><pre>{{ result }}</pre></div>
+			</div>
+		</div>
+	</body>
+</html>
